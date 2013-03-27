@@ -1,4 +1,4 @@
 This version only works with Django 1.5 
 
-
-This version also fixes the issues with adding inlines in the admin where the feild would not populate with the path after clicking "select"
+This version also fixes the issue when adding inlines in the admin and field would not populate with the 
+path after clicking "select" in the file browser.
