@@ -143,13 +143,7 @@ register.tag(selectable)
 @register.simple_tag
 def custom_admin_media_prefix():
     import django
-    if "1.4" in django.get_version():
-        from django.conf import settings
-        return "".join([settings.STATIC_URL,"admin/"])
-    else:
-        try:
-            from django.contrib.admin.templatetags import admin_media_prefix
-        except ImportError:
-            from django.contrib.admin.templatetags.adminmedia import admin_media_prefix
-        return admin_media_prefix()
+
+    from django.conf import settings
+    return "".join([settings.STATIC_URL,"admin/"])
 
